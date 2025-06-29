@@ -70,11 +70,11 @@ kommo-leads-scraper/
 
 ## 🧠 Mejoras futuras
 
-•	Scraping de conversaciones lead por lead
-•	Exportación paralela a CSV
-•	Visualización de métricas con pandas + seaborn
-•	Automatización periódica con cron o scheduler
-•	Login automático por cookies/token
+-	Scraping de conversaciones lead por lead
+-	Exportación paralela a CSV
+-	Visualización de métricas con pandas + seaborn
+-	Automatización periódica con cron o scheduler
+-	Login automático por cookies/token
 
 
 ---
