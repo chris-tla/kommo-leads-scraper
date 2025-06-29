@@ -14,6 +14,7 @@ Este proyecto **automatiza la extracción de leads desde Kommo CRM usando Seleni
 - URL del detalle
 - Nombre del cliente
 - Teléfono  
+
 ✅ Guarda todo en `leads_data.xlsx`
 
 ---
@@ -75,4 +76,5 @@ kommo-leads-scraper/
 ## ✨ Créditos
 
 Creado con 💚 por [Christian Olarte](https://github.com/chris-tla)
+
 Con soporte técnico de ChatGPT 🤖 xd
