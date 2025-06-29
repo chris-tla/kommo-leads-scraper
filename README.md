@@ -34,6 +34,7 @@ pip install -r requirements.txt
 
 ## 📂 Estructura del proyecto
 
+```text
 kommo-leads-scraper/
 ├── notebooks/
 │   ├── 01_scrap_leads_list.ipynb         ← Extracción de leads
@@ -47,6 +48,7 @@ kommo-leads-scraper/
 ├── requirements.txt                      ← Librerías necesarias
 ├── .gitignore                            ← Archivos excluidos
 └── README.md                             ← Este archivo
+```
 
 ---
 
