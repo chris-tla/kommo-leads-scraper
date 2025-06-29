@@ -74,5 +74,5 @@ kommo-leads-scraper/
 
 ## ✨ Créditos
 
-Creado con 💚 por [Christian Olarte] (https://github.com/chris-tla)
+Creado con 💚 por [Christian Olarte](https://github.com/chris-tla)
 Con soporte técnico de ChatGPT 🤖 xd
