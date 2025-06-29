@@ -1,31 +1,35 @@
 # 🧲 Kommo Leads Scraper
 
-Este proyecto **automatiza la extracción de leads desde Kommo CRM usando Selenium**. Extrae información clave de la vista de lista y la guarda en formato Excel, lista para análisis o seguimiento comercial.
+Este proyecto **automatiza la extracción de leads desde Kommo CRM usando Selenium**. Permite obtener información estructurada directamente desde la vista de lista del CRM, sin necesidad de intervención manual, y guardarla en un archivo Excel para facilitar el análisis, el seguimiento comercial o la integración con otros sistemas.
 
 ---
 
 ## 🚀 ¿Qué hace este scraper?
 
-✅ Abre el navegador (Chrome o Brave)  
-✅ Inicia sesión manualmente en Kommo  
-✅ Recorre múltiples páginas de leads  
-✅ Extrae:
-- ID del lead
-- URL del detalle
-- Nombre del cliente
-- Teléfono  
+Este scraper te permite:
 
-✅ Guarda todo en `leads_data.xlsx`
+✅ Abrir el navegador automáticamente (Chrome o Brave)  
+✅ Iniciar sesión manualmente en Kommo  
+✅ Recorrer múltiples páginas de leads  
+✅ Extraer automáticamente:
+
+- ID del lead
+- URL de detalle
+- Nombre del cliente
+- Teléfono
+
+✅ Guardar los resultados en `leads_data.xlsx` para análisis posterior
+
+> Ideal para equipos comerciales, analistas o procesos de recuperación/contactabilidad.
 
 ---
 
 ## 📦 Requisitos
 
 - Python 3.8 o superior
-- Google Chrome o Brave
-- Kommo con acceso a leads
-
-Instalación de dependencias:
+- Google Chrome o Brave (recomendado: Chrome)
+- Acceso activo a Kommo CRM
+- Dependencias del proyecto:
 
 ```bash
 pip install -r requirements.txt
@@ -38,27 +42,29 @@ pip install -r requirements.txt
 ```text
 kommo-leads-scraper/
 ├── notebooks/
-│   ├── 01_scrap_leads_list.ipynb         ← Extracción de leads
-│   └── 02_scrap_lead_conversations.ipynb ← (en desarrollo)
-├── utils/                                ← Funciones reutilizables
-│   ├── driver.py                         ← Configura el navegador
-│   ├── extraction.py                     ← Extracción de leads por página
-│   ├── excel.py                          ← Limpieza y guardado en Excel
-│   ├── settings.py                       ← Parámetros globales
-├── leads_data.xlsx                       ← Archivo generado
-├── requirements.txt                      ← Librerías necesarias
-├── .gitignore                            ← Archivos excluidos
-└── README.md                             ← Este archivo
+│   ├── 01_scrap_leads_list.ipynb          ← Extracción de leads (vista de lista)
+│   ├── 02_scrap_lead_conversations.ipynb  ← (en desarrollo)
+│   └── 03_scrap_first_replies.ipynb       ← Extracción de primeras respuestas
+├── utils/                                 ← Módulos funcionales reutilizables
+│   ├── driver.py                          ← Configura el navegador con Selenium
+│   ├── extraction.py                      ← Lógica para extraer leads
+│   ├── conversations.py                   ← Scraping de respuestas en el detalle del lead
+│   ├── excel.py                           ← Limpieza y guardado en Excel
+│   └── settings.py                        ← Parámetros globales
+├── leads_data.xlsx                        ← Archivo generado con los leads
+├── requirements.txt                       ← Librerías necesarias
+├── .gitignore                             ← Exclusiones del repositorio
+└── README.md                              ← Este archivo
 ```
 
 ---
 
 ## 🧪 ¿Cómo usarlo?
 
-  1.	Ejecuta notebooks/01_scrap_leads_list.ipynb
-  2.	Inicia sesión manualmente cuando se abra el navegador
-  3.	Presiona ENTER cuando estés en la lista de leads
-  4.	Se recorrerán todas las páginas y se guardará la data en Excel
+1.	Ejecuta notebooks/01_scrap_leads_list.ipynb
+2.	Inicia sesión manualmente cuando el navegador se abra
+3.	Una vez estés en la lista de leads, vuelve al notebook y presiona ENTER
+4.	Se recorrerán todas las páginas de leads y se generará el archivo leads_data.xlsx
 
 ---
 
@@ -66,9 +72,9 @@ kommo-leads-scraper/
 
 •	Scraping de conversaciones lead por lead
 •	Exportación paralela a CSV
-•	Análisis con pandas y visualización de métricas
-•	Automatización periódica
-•	Login con cookies o token
+•	Visualización de métricas con pandas + seaborn
+•	Automatización periódica con cron o scheduler
+•	Login automático por cookies/token
 
 
 ---
@@ -77,4 +83,4 @@ kommo-leads-scraper/
 
 Creado con 💚 por [Christian Olarte](https://github.com/chris-tla)
 
-Con soporte técnico de ChatGPT 🤖 xd
+Con soporte técnico de ChatGPT 🤖 y mucha cafeína ☕️
